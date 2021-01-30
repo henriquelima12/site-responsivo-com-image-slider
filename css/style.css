@@ -1,0 +1,231 @@
+:root {
+    --textColor: #000;
+    --footerColor: #aebecc; 
+}
+*{
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	font-family: Century Gothic, Arial, Helvetica;
+}
+nav{
+	background-color: #f0f0f0;
+}
+nav ul{
+    display: flex;
+}
+nav ul li a{
+    text-decoration: none;
+    color: var(--textColor);
+}
+.checkbtn{
+    cursor: pointer;	
+    display: flex;
+    align-items: center;
+    margin: 0 3px 3px 0;
+    font-size: 20px;
+}
+.logo{
+	display: flex;
+    align-items: center;
+	text-decoration: none;
+    color: var(--textColor);
+    font-weight: bold;
+    margin: 0 0 3px 3px;
+}
+.logo:hover, nav ul li a:hover{
+    cursor: pointer;
+    color: #783c00;
+}
+#check{
+	display: none;
+}
+
+section img{
+    height: 420px;
+    width: 100%;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    background-color: #f2f2f2;
+}
+ main h3{
+    text-align: center;
+    font-size: 25px;
+    margin-top: 55px;
+    font-weight: lighter;
+}
+.text{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-size: 12px; 
+}
+.text-box{
+    width: 20%;
+    margin-left: 18px;
+    border-top: 1.5px solid #000;
+}
+ .text-box h4{
+    font-size: 12px;
+    margin-top: 22px;
+    color: #ba3d3f;
+}
+
+aside{
+    height: 450px;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;    
+}
+.slider-width{
+    height: 100%;
+    display: flex;
+    transition: all ease 0.3s;
+    margin-bottom: 30px;
+}
+.slider-item{
+    width: 100vw;
+    height: inherit;
+    background-position: center;
+    background-size: cover;
+}
+.slider-item img{
+    width: 100%;
+    height: 100%;
+}  
+aside .buttons{
+    position: absolute;
+    z-index: 99;
+    display: flex;
+    width: 100%;
+    justify-content: center; 
+}
+.button-slider{
+    width: 8%;
+    height: 50px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.button-slider img{
+    width: 50%;
+    height: 50%;
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    font-size: 10px;
+    background-color: #1b3146;
+    color: var(--footerColor);
+    flex-wrap: wrap;
+}
+footer div{
+    width: 10%;
+    margin: 35px 85px 35px 85px;
+    text-align: center;
+}
+footer div p{
+    margin-bottom: 4px;
+}
+footer div h5{
+    font-size: 12px;
+    margin-bottom: 14px;
+}
+footer div h6{
+    font-size: 11px;
+    margin-top: 12px;
+}
+
+@media screen and (max-width: 750px){
+	nav{
+        height: 45px;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row-reverse;
+	}
+	nav ul{
+        flex-direction: column;
+        position: fixed;
+        width: 100%;
+        height: 450px;
+        background-color: #c0c0c0;
+        left: -100%;
+        transition: all .5s;
+        top: 45px;
+        z-index: 99;
+        align-items: center;
+    }
+    nav ul li{
+        margin: 20px 0;
+    }
+    .logo{
+    	font-size: 16px;
+    }
+	#check:checked ~ ul{
+		left: 0;
+	}
+
+	main{
+        height: 500px;
+    }
+    main h3{
+        font-size: 22px;    
+    }
+    .text{
+        margin-top: 15px;     
+    }
+    .text-box{
+        margin-top: 30px;
+        text-align: center;
+    }
+    .text-box h4{
+        margin-top: 20px;
+    }
+}
+
+@media screen and (min-width: 751px) {
+	nav{
+        display: flex;
+        height: 80px;
+        width: 100%;
+        justify-content: space-around;
+        align-items: center;
+	}
+	ul{
+		display: flex;
+	}
+	ul li{
+		list-style-type: none;
+		margin-left: 20px;
+	}
+	.logo{
+		display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 150px;
+        font-size: 20px;
+	}
+	.checkbtn{
+		display: none;
+	}
+
+	main{
+        height: 400px;
+    }
+    main h3{
+        font-size: 30px;
+    }
+    .text{
+        margin-top: 55px; 
+    }
+    .text-box h4{
+        margin-top: 22px;
+    }
+}
+
+
